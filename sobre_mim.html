@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braulio Reis - Técnico de TI</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: var(--shadow);
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .profile-info h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .contact-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .services {
+            background-color: var(--light-color);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-card h3::before {
+            content: '✔';
+            color: var(--secondary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .journey-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .journey-item {
+            margin-bottom: 30px;
+            padding-left: 30px;
+            border-left: 3px solid var(--secondary-color);
+            position: relative;
+        }
+        
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+            left: -9px;
+            top: 5px;
+        }
+        
+        .contact {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact h2::after {
+            background-color: white;
+        }
+        
+        .contact-info {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        footer {
+            background-color: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-info h2 {
+                font-size: 1.2rem;
+            }
+            
+            .contact-info {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <div class="profile-img">Imagem de Perfil</div>
+                <div class="profile-info">
+                    <h1>BRAULIO REIS</h1>
+                    <h2>TÉCNICO DE TI</h2>
+                    <a href="#contact" class="contact-btn">Entrar em Contato</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <p>Olá! Sou Bráulio Reis, um profissional de tecnologia com formação em Sistemas de Informação, com uma sólida trajetória na área de informática. Ao longo dos anos, adquiri experiência valiosa e continuei buscando oportunidades para crescer e inovar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Serviços Prestados</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Remoção de Vírus</h3>
+                    <p>Eliminação completa de malware, spyware e outros tipos de vírus que possam estar afetando o desempenho do seu computador.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Formatação</h3>
+                    <p>Formatação profissional de PCs e notebooks com reinstalação do sistema operacional e todos os drivers necessários.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Upgrades de Sistema</h3>
+                    <p>Melhoria do desempenho do seu equipamento através de atualizações de hardware e software.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Instalação de Redes</h3>
+                    <p>Instalação e configuração de redes cabeadas e Wi-Fi para residências e empresas.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparos</h3>
+                    <p>Conserto de hardware, substituição de peças defeituosas e solução de problemas técnicos diversos.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Backup e Recuperação</h3>
+                    <p>Serviços de backup de dados importantes e recuperação de arquivos perdidos ou corrompidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey">
+        <div class="container">
+            <h2>Minha Jornada Profissional</h2>
+            <div class="journey-content">
+                <div class="journey-item">
+                    <h3>Formação Acadêmica</h3>
+                    <p>🎓 Graduação em Sistemas de Informação</p>
+                </div>
+                <div class="journey-item">
+                    <h3>Experiência Profissional</h3>
+                    <p>💼 Assistente de administração, Suporte de TI, Desenvolvedor</p>
+                </div>
+                <div class="journey-item">
+                    <h3>Compromisso com a Excelência</h3>
+                    <p>🚀 Comprometido com o aprendizado contínuo e a adoção de tecnologias de ponta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="passion">
+        <div class="container">
+            <h2>Minha Paixão</h2>
+            <div class="about-content">
+                <p>💻 Especializado em manutenção de computadores, desenvolvimento de software, segurança cibernética, administração de sistemas, etc.</p>
+                <p>🌐 Apaixonado por resolver desafios complexos e criar soluções inovadoras que beneficiam os usuários e a comunidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="expectations">
+        <div class="container">
+            <h2>O Que Você Pode Esperar</h2>
+            <div class="about-content">
+                <p>🔧 Projetos inovadores que demonstram minha paixão e habilidades em tecnologia.</p>
+                <p>📚 Compartilhamento de conhecimento e experiência através de artigos e publicações técnicas.</p>
+                <p>🤝 Colaboração em projetos de código aberto que considero importantes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Vamos Conectar!</h2>
+            <p>Ficarei feliz em conectar com outros profissionais de tecnologia, compartilhar conhecimento e explorar oportunidades de colaboração.</p>
+            <div class="contact-info">
+                <p>(38) 98818-8153</p>
+            </div>
+            <p>Sinta-se à vontade para entrar em contato comigo para discussões profissionais e Networking.</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Braulio Reis - Técnico de TI. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
