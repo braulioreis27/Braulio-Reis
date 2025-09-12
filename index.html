@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Braulio Reis - Técnico de TI</title>
   <style>
-    /* Background animado */
     body {
       margin: 0;
       min-height: 100vh;
-      background: linear-gradient(120deg, #3498db, #2c3e50, #e74c3c);
-      background-size: 400% 400%;
-      animation: gradientBG 16s ease infinite;
-    }
-    @keyframes gradientBG {
-      0%,100% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-    }
-
-    * {
-      box-sizing: border-box;
+      background-color: #f9f9f9; /* Fundo branco claro */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 20px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
     }
 
     .container {
-      max-width: 500px;
-      margin: 60px auto;
-      padding: 48px 32px 32px 32px;
-      background: rgba(255,255,255,0.92);
+      max-width: 600px;
+      background: rgba(44, 62, 80, 0.07); /* Fundo translúcido com gradiente */
+      background-image: linear-gradient(120deg, #3498db, #2c3e50, #e74c3c);
+      background-size: 400% 400%;
+      animation: gradientBG 16s ease infinite;
       border-radius: 30px;
-      box-shadow: 0 12px 40px rgba(44,62,80,0.08), 0 4px 24px rgba(52,152,219,0.18);
+      box-shadow: 0 12px 40px rgba(44, 62, 80, 0.1), 0 4px 24px rgba(52, 152, 219, 0.15);
+      padding: 48px 32px 32px 32px;
+      box-sizing: border-box;
       animation: fadeInUp 1s ease;
     }
+
+    @keyframes gradientBG {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
     @keyframes fadeInUp {
-      from {opacity:0; transform:translateY(30px);}
-      to {opacity:1; transform:translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .profile-img {
@@ -43,28 +56,36 @@
       align-items: center;
       margin-bottom: 24px;
     }
+
     .profile-img img {
       width: 180px;
       height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(52,152,219,0.18);
+      box-shadow: 0 8px 20px rgba(52, 152, 219, 0.18);
       border: 6px solid #fff;
       transition: transform 0.4s, box-shadow 0.4s;
     }
+
     .profile-img img:hover {
       transform: scale(1.05) rotate(-2deg);
-      box-shadow: 0 16px 40px rgba(231,76,60,0.22);
+      box-shadow: 0 16px 40px rgba(231, 76, 60, 0.22);
     }
 
     .profile-info {
       text-align: center;
       animation: fadeIn 1.5s;
     }
+
     @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
+
     .profile-info h1 {
       font-size: 2.4rem;
       font-weight: bold;
@@ -72,6 +93,7 @@
       margin: 8px 0 4px;
       letter-spacing: 2px;
     }
+
     .profile-info h2 {
       font-size: 1.3rem;
       font-weight: 400;
@@ -79,12 +101,15 @@
       margin-bottom: 18px;
       letter-spacing: 1px;
     }
+
     .profile-info p {
       color: #333;
       font-size: 1.07rem;
       line-height: 1.65;
-      margin-top:6px;
+      margin-top: 6px;
+      white-space: pre-line;
     }
+
     .contact-btn {
       display: inline-block;
       padding: 12px 30px;
@@ -95,10 +120,11 @@
       text-decoration: none;
       font-size: 1rem;
       letter-spacing: 1.5px;
-      margin-top:18px;
-      box-shadow: 0 4px 16px rgba(231,76,60,0.09);
+      margin-top: 18px;
+      box-shadow: 0 4px 16px rgba(231, 76, 60, 0.09);
       transition: background 0.35s, transform 0.35s;
     }
+
     .contact-btn:hover {
       background: #c0392b;
       transform: translateY(-3px) scale(1.07);
@@ -110,24 +136,63 @@
         padding: 20px;
       }
       .profile-img img {
-        width: 120px; height: 120px;
+        width: 120px;
+        height: 120px;
       }
-      .profile-info h1 {font-size: 1.53rem;}
-      .profile-info h2 {font-size: 1rem;}
+      .profile-info h1 {
+        font-size: 1.53rem;
+      }
+      .profile-info h2 {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="profile-img">
-      <img src="perfil.jpg" alt="Foto de Perfil Profissional">
+      <img src="perfil.jpg" alt="Foto de Perfil Profissional" />
     </div>
     <div class="profile-info">
       <h1>Braulio Reis</h1>
       <h2>Técnico de TI</h2>
-      <p>Olá! Sou Bráulio Reis, formado em Sistemas de Informação, com sólida trajetória e experiência na área de informática.<br>
-      Especializado em manutenção de computadores, desenvolvimento de software, segurança cibernética e administração de sistemas.<br>
-      Comprometido com aprendizado contínuo e com a criação de soluções inovadoras que beneficiam clientes e comunidade.</p>
+      <p>
+        Olá! Sou Bráulio Reis, um profissional de tecnologia com formação em Sistemas de Informação, com uma sólida trajetória na área de informática. Ao longo dos anos, adquiri experiência valiosa e continuei buscando oportunidades para crescer e inovar.
+
+        Eliminação completa de malware, spyware e outros tipos de vírus que possam estar afetando o desempenho do seu computador.
+
+        Formatação profissional de PCs e notebooks com reinstalação do sistema operacional e todos os drivers necessários.
+
+        Melhoria do desempenho do seu equipamento através de atualizações de hardware e software.
+
+        Instalação e configuração de redes cabeadas e Wi-Fi para residências e empresas.
+
+        Conserto de hardware, substituição de peças defeituosas e solução de problemas técnicos diversos.
+
+        Serviços de backup de dados importantes e recuperação de arquivos perdidos ou corrompidos.
+
+        🎓 Graduação em Sistemas de Informação
+
+        💼 Assistente de administração, Suporte de TI, Desenvolvedor
+
+        🚀 Comprometido com o aprendizado contínuo e a adoção de tecnologias de ponta
+
+        💻 Especializado em manutenção de computadores, desenvolvimento de software, segurança cibernética, administração de sistemas, etc.
+
+        🌐 Apaixonado por resolver desafios complexos e criar soluções inovadoras que beneficiam os usuários e a comunidade.
+
+        🔧 Projetos inovadores que demonstram minha paixão e habilidades em tecnologia.
+
+        📚 Compartilhamento de conhecimento e experiência através de artigos e publicações técnicas.
+
+        🤝 Colaboração em projetos de código aberto que considero importantes.
+
+        Ficarei feliz em conectar com outros profissionais de tecnologia, compartilhar conhecimento e explorar oportunidades de colaboração.
+
+        (38) 98818-8153
+
+        Sinta-se à vontade para entrar em contato comigo para discussões profissionais e Networking.
+      </p>
       <a class="contact-btn" href="tel:38988188153">Entrar em contato</a>
     </div>
   </div>
