@@ -1,118 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Sobre Mim - Bráulio Reis</title>
-    <style>
-        body {
-            margin: 0;
-            background: #222;
-            font-family: "Segoe UI", Arial, sans-serif;
-            color: #fafafa;
-        }
-        .perfil-container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 2rem;
-            padding: 60px 0;
-            max-width: 950px;
-            margin: auto;
-        }
-        .imagem-animada-bg {
-            position: relative;
-            width: 320px;
-            height: 320px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 2px 24px 3px rgba(0, 0, 0, 0.25);
-            background: linear-gradient(135deg, #0fd2ad 0%, #2686ec 50%, #3f3be7 100%);
-            animation: fundoAnimado 4s ease-in-out infinite alternate;
-        }
-        @keyframes fundoAnimado {
-            0% {
-                background-position: 0% 50%;
-                filter: blur(0px) brightness(1);
-            }
-            100% {
-                background-position: 100% 50%;
-                filter: blur(1px) brightness(1.1);
-            }
-        }
-        .foto-perfil {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            opacity: 0.94;
-            z-index: 1;
-        }
-        .dados-perfil {
-            flex: 1;
-            background: rgba(32,32,32,0.94);
-            border-radius: 14px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-            padding: 32px 34px;
-        }
-        .dados-perfil h1 {
-            font-size: 2.1rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #0fd2ad;
-            letter-spacing: -1px;
-        }
-        .dados-perfil p,
-        .dados-perfil ul {
-            font-size: 1.18rem;
-            line-height: 1.65;
-            margin-bottom: 14px;
-        }
-        .dados-perfil ul {
-            list-style: disc inside;
-            margin-bottom: 16px;
-        }
-        @media (max-width: 800px) {
-            .perfil-container {
-                flex-direction: column;
-                align-items: center;
-                padding: 24px 6px;
-            }
-            .dados-perfil {
-                padding: 18px 8px;
-            }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sobre Mim - Bráulio Reis</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #222;
+    color: #eee;
+    margin: 20px;
+    padding: 0;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .foto-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  /* Fundo animado com cores em movimento atrás da foto */
+  .fundo-animado {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(-45deg, #0fd2ad, #2686ec, #3f3be7, #0fd2ad);
+    background-size: 400% 400%;
+    animation: animCores 10s ease infinite;
+    filter: brightness(0.8);
+    z-index: 1;
+  }
+  @keyframes animCores {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+  .foto-container img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    z-index: 2;
+  }
+  .conteudo {
+    flex: 1;
+    background: rgba(40,40,40,0.9);
+    padding: 20px 28px;
+    border-radius: 12px;
+  }
+  h1 {
+    color: #0fd2ad;
+    margin-top: 0;
+    font-size: 2rem;
+  }
+  p, ul {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  ul {
+    padding-left: 20px;
+  }
+</style>
 </head>
 <body>
-    <section class="perfil-container">
-        <div class="imagem-animada-bg">
-            <img src="perfil.jpg" alt="Foto de perfil" class="foto-perfil">
-        </div>
-        <div class="dados-perfil">
-            <h1>Olá! Sou Bráulio Reis</h1>
-            <p>Sou um profissional de tecnologia com formação em Sistemas de Informação, com uma sólida trajetória na área de informática. Ao longo dos anos, adquiri experiência valiosa e continuei buscando oportunidades para crescer e inovar.</p>
-            <ul>
-                <li>Eliminação completa de malware, spyware e outros tipos de vírus que possam estar afetando o desempenho do seu computador.</li>
-                <li>Formatação profissional de PCs e notebooks com reinstalação do sistema operacional e todos os drivers necessários.</li>
-                <li>Melhoria do desempenho do seu equipamento através de atualizações de hardware e software.</li>
-                <li>Instalação e configuração de redes cabeadas e Wi-Fi para residências e empresas.</li>
-                <li>Conserto de hardware, substituição de peças defeituosas e solução de problemas técnicos diversos.</li>
-                <li>Serviços de backup de dados importantes e recuperação de arquivos perdidos ou corrompidos.</li>
-            </ul>
-            <ul>
-                <li>🎓 Graduação em Sistemas de Informação</li>
-                <li>💼 Assistente de administração, Suporte de TI, Desenvolvedor</li>
-                <li>🚀 Comprometido com o aprendizado contínuo e a adoção de tecnologias de ponta</li>
-                <li>💻 Especializado em manutenção de computadores, desenvolvimento de software, segurança cibernética, administração de sistemas, etc.</li>
-                <li>🌐 Apaixonado por resolver desafios complexos e criar soluções inovadoras que beneficiam os usuários e a comunidade.</li>
-                <li>🔧 Projetos inovadores que demonstram minha paixão e habilidades em tecnologia.</li>
-                <li>📚 Compartilhamento de conhecimento e experiência através de artigos e publicações técnicas.</li>
-                <li>🤝 Colaboração em projetos de código aberto que considero importantes.</li>
-            </ul>
-            <p>Ficarei feliz em conectar com outros profissionais de tecnologia, compartilhar conhecimento e explorar oportunidades de colaboração.</p>
-            <p><strong>(38) 98818-8153</strong></p>
-            <p>Sinta-se à vontade para entrar em contato comigo para discussões profissionais e Networking.</p>
-        </div>
-    </section>
+  <div class="container">
+    <div class="foto-container">
+      <div class="fundo-animado"></div>
+      <img src="perfil.jpg" alt="Foto de Bráulio Reis" />
+    </div>
+    <div class="conteudo">
+      <!-- Conteúdo exatamente como no seu arquivo sobre_mim.html -->
+      <p>Olá! Sou Bráulio Reis, um profissional de tecnologia com formação em Sistemas de Informação, com uma sólida trajetória na área de informática. Ao longo dos anos, adquiri experiência valiosa e continuei buscando oportunidades para crescer e inovar.</p>
+
+      <p>Eliminação completa de malware, spyware e outros tipos de vírus que possam estar afetando o desempenho do seu computador.</p>
+
+      <p>Formatação profissional de PCs e notebooks com reinstalação do sistema operacional e todos os drivers necessários.</p>
+
+      <p>Melhoria do desempenho do seu equipamento através de atualização de hardware e software.</p>
+
+      <p>Instalação e configuração de redes cabeadas e Wi-Fi para residências e empresas.</p>
+
+      <p>Conserto de hardware, substituição de peças defeituosas e solução de problemas técnicos diversos.</p>
+
+      <p>Serviços de backup de dados importantes e recuperação de arquivos perdidos ou corrompidos.</p>
+
+      <ul>
+        <li>🎓 Graduação em Sistemas de Informação</li>
+        <li>💼 Assistente de administração, Suporte de TI, Desenvolvedor</li>
+        <li>🚀 Comprometido com o aprendizado contínuo e a adoção de tecnologias de ponta</li>
+        <li>💻 Especializado em manutenção de computadores, desenvolvimento de software, segurança cibernética, administração de sistemas, etc.</li>
+        <li>🌐 Apaixonado por resolver desafios complexos e criar soluções inovadoras que beneficiam os usuários e a comunidade.</li>
+        <li>🔧 Projetos inovadores que demonstram minha paixão e habilidades em tecnologia.</li>
+        <li>📚 Compartilhamento de conhecimento e experiência através de artigos e publicações técnicas.</li>
+        <li>🤝 Colaboração em projetos de código aberto que considero importantes.</li>
+      </ul>
+
+      <p>Ficarei feliz em conectar com outros profissionais de tecnologia, compartilhar conhecimento e explorar oportunidades de colaboração.</p>
+
+      <p><strong>(38) 98818-8153</strong></p>
+
+      <p>Sinta-se à vontade para entrar em contato comigo para discussões profissionais e Networking.</p>
+    </div>
+  </div>
 </body>
 </html>
